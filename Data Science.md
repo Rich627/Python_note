@@ -1,4 +1,4 @@
-### data_clean 
+## data_clean 
 
 ```Python
 #數據加載成dataframe
@@ -20,7 +20,7 @@ df.iloc[[]]
 df.loc['']
 ```
 
-#### 常用語法
+## 常用語法
 ```Python
 #印出前5筆資料
 df.head()
@@ -31,7 +31,7 @@ df.describe()
 #印出data的type
 df.dtypes
 ```
-### data_visualization
+## data_visualization
 ```Python
 #折線圖
 plt.plot(x, y)
@@ -63,7 +63,7 @@ df = xx[['x', 'x', 'x']
 df.plot()
 ```
 
-### Math and Statistics
+## Math and Statistics
 ```Python
 #創造np.array
 a = np.array([[2, 4, 6], [1, 3, 5], [10, 20, 30]])
@@ -86,5 +86,24 @@ r, p_value = spearmanr('x', 'x')
 #卡方檢定 p_value>0.05變量相互獨立
 table = pd.crosstab('x','x')
 chi2, p, dor, expected = chi_contingency(table)
+#標準化數據 
+form sklearn preprocessing
+from sklearn.preprocessing import scale
+std_x = scale(x)
+
+```
+
+## ML Dimension Reduction(降維)
+```Python
+???????
+#降維PCA
+import sklearn
+from sklearn.decomposition import PCA
+pca = PCA()
+xx_pca = pca.fit.transform(x)
+pca.explainde_variance_ratio_
+```
+## ML 異常值
+```Python
 
 ```
