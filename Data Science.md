@@ -4,7 +4,7 @@
 #數據加載成dataframe
 df = pd.read_csv('path')
 #重設cloumns name
-cars.columns([''])
+xx.columns([''])
 #新增欄位
 df['new_column'] = df['xx'] + 1
 #刪除欄位
@@ -18,6 +18,14 @@ df.drop(axis = 1)
 df.iloc[[]]
 #裡面填value
 df.loc['']
+#以下是指column
+axis = 1
+#預設為row
+axis = 0
+#資料合併增加新的col預設為增加新的row
+pd.concat([x, xx.rename()], axis = 1)
+#資料排序遞減預設為遞增
+df.sort_values(x, ascending = False)
 ```
 
 ## 常用語法
