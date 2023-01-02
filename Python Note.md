@@ -26,6 +26,7 @@ axis = 0
 pd.concat([x, xx.rename()], axis = 1)
 #資料排序遞減預設為遞增
 df.sort_values(x, ascending = False)
+
 ```
 
 ## 常用語法
@@ -38,6 +39,8 @@ data.isnull()
 df.describe()
 #印出data的type
 df.dtypes
+#計算整個col有幾個..
+df['col_name'].value_counts()
 ```
 ## data_visualization
 ```Python
@@ -58,6 +61,7 @@ sns.boxplot(x='', y='', data=x)
 sns.distplot(xx)
 #畫出散點圖
 sns.reglot(x='xx', y='xx',data=xx, scatter=True)
+df.plot.scatter(title='x', x='', y='')
 #畫出散點圖矩陣
 sns.pairplot(df)
 #畫熱力圖
@@ -69,6 +73,11 @@ plt.title('xx')
 #畫出特定欄位的圖
 df = xx[['x', 'x', 'x']
 df.plot()
+#設定x座標字體傾斜角度
+plt.xticks(rotation=幾度)
+#用sklearn把data標準化參數0,1可修改
+scaler = MinMaxScaler(feature_range=(0, 1)).fit(df) 
+df_scaled = scaler.transform(df)
 ```
 
 ## Math and Statistics
